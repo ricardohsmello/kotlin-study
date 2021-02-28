@@ -166,7 +166,7 @@ class GuideToArrays {
         print(reduceAccumulator)
     }
 
- 
+
 
    fun Array<BigDecimal>.reduceAccumulator() : BigDecimal {
         return this.reduce { acc, bigDecimal ->

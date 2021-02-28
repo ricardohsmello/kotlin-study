@@ -1,17 +1,26 @@
 import examples.GuideToArrays
 import examples.GuideToNullSafety
 import examples.GuideToConditions
+import examples.GuideToList
 import java.math.BigDecimal
 
 fun main() {
 
 //    guideToNullSafety()
 //    guideToConditions()
-    guideToArrays()
-
+//    guideToArrays()
+    guideToList()
 
 }
 
+fun guideToList() {
+
+    val guideToList = GuideToList()
+    guideToList.printBooksOrderByYearWithComparable()
+    guideToList.printBooksWithSortedBy()
+    guideToList.filterBookByAuthor("Edson Yanaga")
+
+}
 
 
 fun guideToArrays() {
