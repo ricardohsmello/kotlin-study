@@ -1,7 +1,4 @@
-import examples.GuideToArrays
-import examples.GuideToNullSafety
-import examples.GuideToConditions
-import examples.GuideToList
+import examples.*
 import java.math.BigDecimal
 
 fun main() {
@@ -9,8 +6,22 @@ fun main() {
 //    guideToNullSafety()
 //    guideToConditions()
 //    guideToArrays()
-    guideToList()
+//    guideToList()
 
+    guideToFunctional()
+}
+
+fun guideToFunctional() {
+
+    val guideToFunctional = GuideToFunctional()
+    guideToFunctional.exampleFunction()
+    guideToFunctional.exampleFunctionWithClass()
+    guideToFunctional.exampleFunctionWithLambdaAnUnitReturn()
+    guideToFunctional.exampleFunctionAnonymous()
+    guideToFunctional.exampleFunctionWithLambdaAnIntReturn()
+    guideToFunctional.exampleFunctionAnonymousWithIntReturn()
+    guideToFunctional.exampleFunctionWithTwoResultsUsingLit()
+    guideToFunctional.exampleMultiplyingWithHigherOrderFunction()
 }
 
 fun guideToList() {
@@ -58,4 +69,5 @@ fun guideToConditions() {
     println(conditions.whatIsTheGreatestNumberUsingIf(33, 15, 8))
 
 }
+
 
