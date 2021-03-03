@@ -1,5 +1,6 @@
 package examples
 
+import model.Book
 import kotlin.math.ln1p
 
 class GuideToFunctional {
@@ -85,4 +86,17 @@ class GuideToFunctional {
             return p1+p2
         }
     }
+
+    data class Aleixo(
+        val id: String
+    )
+
+    data class AleixoPayload(
+        val aleixoId: String
+    )
+
+
+    fun Aleixo.toPayload() = AleixoPayload (
+        aleixoId = id
+    )
 }

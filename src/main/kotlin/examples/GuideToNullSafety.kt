@@ -1,6 +1,8 @@
 
 package examples
 
+import model.Book
+
 class GuideToNullSafety() {
 
     init {
@@ -14,6 +16,16 @@ class GuideToNullSafety() {
     fun printUsingLet(nome: String?) {
         nome?.let { name ->
             println("O nome tem ${name.length} letras!")
+        }
+    }
+
+    fun with1(book: Book?) {
+
+        with(book) {
+            print("valor = ${this?.title}")
+        }
+
+        book.let {
         }
     }
 
