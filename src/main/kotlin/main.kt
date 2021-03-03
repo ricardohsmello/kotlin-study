@@ -7,8 +7,8 @@ fun main() {
 //    guideToConditions()
 //    guideToArrays()
 //    guideToList()
-
-    guideToFunctional()
+//    guideToList()
+    guideToCollections()
 }
 
 fun guideToFunctional() {
@@ -25,12 +25,16 @@ fun guideToFunctional() {
 }
 
 fun guideToList() {
-
     val guideToList = GuideToList()
     guideToList.printBooksOrderByYearWithComparable()
     guideToList.printBooksWithSortedBy()
     guideToList.filterBookByAuthor("Edson Yanaga")
+}
 
+fun guideToCollections() {
+    val guideToCollections = GuideToCollections()
+    guideToCollections.listMutable()
+    guideToCollections.listImutable()
 }
 
 
