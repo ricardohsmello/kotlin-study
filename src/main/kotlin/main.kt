@@ -8,8 +8,12 @@ fun main() {
 //    guideToArrays()
 //    guideToList()
 //    guideToList()
-    guideToCollections()
+//    guideToCollections()
+//    guideToSet()
+//    guideToInfix()
+    guideToMap()
 }
+
 
 fun guideToFunctional() {
 
@@ -33,9 +37,45 @@ fun guideToList() {
 
 fun guideToCollections() {
     val guideToCollections = GuideToCollections()
-    guideToCollections.listMutable()
-    guideToCollections.listImutable()
+//    guideToCollections.listMutable()
+//    guideToCollections.listImutable()
+    guideToCollections.distinctList()
+
 }
+
+fun guideToInfix() {
+    val guideToInfixFunctions = GuideToInfixFunctions()
+    guideToInfixFunctions add "Ricas"
+    println(guideToInfixFunctions.list)
+}
+
+fun guideToSet() {
+    val guideToSet = GuideToSet()
+//    guideToSet.plusExample()
+//    guideToSet.operationExample()
+//    guideToSet.unionExample()
+//    guideToSet.intersectExample()
+    guideToSet.subtractExample()
+}
+
+fun guideToMap() {
+    val guideToMap = GuideToMap()
+//    guideToMap.pairExample()
+//    guideToMap.pairWithInfix()
+//    guideToMap.getByKeyValue(2)
+//    guideToMap.addingValueMap()
+//    guideToMap.puttingIfAbsent()
+//    guideToMap.removing()
+//    guideToMap.removingIfValueAndKeyMatch()
+//    guideToMap.getValue()
+//    guideToMap.getOrElse()
+//    guideToMap.getOrDefault()
+    guideToMap.filterValues("Ricardo")
+    guideToMap.filterValues("Not exists")
+    guideToMap.plusOperation()
+}
+
+
 
 
 fun guideToArrays() {
