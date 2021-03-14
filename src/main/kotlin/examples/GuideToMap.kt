@@ -49,7 +49,7 @@ class GuideToMap {
         println(createMapIntString)
     }
 
-//Não deixa substituir o valor caso ja exista essa chave cadastrada
+    //Não deixa substituir o valor caso ja exista essa chave cadastrada
     fun puttingIfAbsent() {
         val createMapIntString = createMapIntString()
         createMapIntString.putIfAbsent(1, "Joao")
@@ -63,7 +63,7 @@ class GuideToMap {
     }
 
     //Nao vai conseguir remover, pois a posicao 1 existe, mas o valor que lá contem é diferente de jose
-    fun removingIfValueAndKeyMatch () {
+    fun removingIfValueAndKeyMatch() {
         val removingIfValueAndKeyMatch = createMapIntString()
         removingIfValueAndKeyMatch.remove(1, "Jose")
         println(createMapIntString())
@@ -107,10 +107,46 @@ class GuideToMap {
     }
 
     fun plusOperation() {
-
         val createMapIntString = createMapIntString()
         val mutableMapOf = mutableMapOf(Pair(3, "Ricas"))
         println(createMapIntString + mutableMapOf)
     }
+
+    fun associateWithMap() {
+
+        val people = listOf(
+            Person("ricas", "mello"),
+            Person("henrique", "silva")
+        )
+
+        val associate = people.associateWith { person ->
+            Pair(person.name, "CONCAT")
+        }
+
+        println(associate)
+
+    }
+
+    fun groupByMap() {
+
+        val listOf = listOf(
+            Pedidos(150, "Pedido 1"),
+            Pedidos(36, "Pedido 2"),
+            Pedidos(400, "Pedido 3")
+        )
+
+        val groupBy = listOf.groupBy { pedido ->
+            pedido.value > 50
+        }
+
+        println(groupBy[true])
+
+
+    }
+
+    data class Pedidos(val value: Int, val name: String)
+
+    data class Person(val name: String, val lastName: String)
+
 
 }

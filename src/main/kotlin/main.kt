@@ -11,21 +11,24 @@ fun main() {
 //    guideToCollections()
 //    guideToSet()
 //    guideToInfix()
-    guideToMap()
+//    guideToMap()
+    guideToFunctional()
 }
 
 
 fun guideToFunctional() {
 
     val guideToFunctional = GuideToFunctional()
-    guideToFunctional.exampleFunction()
-    guideToFunctional.exampleFunctionWithClass()
-    guideToFunctional.exampleFunctionWithLambdaAnUnitReturn()
-    guideToFunctional.exampleFunctionAnonymous()
-    guideToFunctional.exampleFunctionWithLambdaAnIntReturn()
-    guideToFunctional.exampleFunctionAnonymousWithIntReturn()
-    guideToFunctional.exampleFunctionWithTwoResultsUsingLit()
-    guideToFunctional.exampleMultiplyingWithHigherOrderFunction()
+//    guideToFunctional.exampleFunction()
+//    guideToFunctional.exampleFunctionWithClass()
+//    guideToFunctional.exampleFunctionWithLambdaAnUnitReturn()
+//    guideToFunctional.exampleFunctionAnonymous()
+//    guideToFunctional.exampleFunctionWithLambdaAnIntReturn()
+//    guideToFunctional.exampleFunctionAnonymousWithIntReturn()
+//    guideToFunctional.exampleFunctionWithTwoResultsUsingLit()
+//    guideToFunctional.exampleMultiplyingWithHigherOrderFunction()
+//    guideToFunctional.scopeFunctions()
+    guideToFunctional.funTakeIfTakeUnless()
 }
 
 fun guideToList() {
@@ -70,10 +73,13 @@ fun guideToMap() {
 //    guideToMap.getValue()
 //    guideToMap.getOrElse()
 //    guideToMap.getOrDefault()
-    guideToMap.filterValues("Ricardo")
-    guideToMap.filterValues("Not exists")
-    guideToMap.plusOperation()
+//    guideToMap.filterValues("Ricardo")
+//    guideToMap.filterValues("Not exists")
+//    guideToMap.plusOperation()
+//    guideToMap.associateWithMap()
+    guideToMap.groupByMap()
 }
+
 
 
 

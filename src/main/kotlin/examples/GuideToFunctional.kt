@@ -1,8 +1,5 @@
 package examples
 
-import model.Book
-import kotlin.math.ln1p
-
 class GuideToFunctional {
     fun exampleFunction() {
         val myFunction: () -> String = ::getString
@@ -87,16 +84,67 @@ class GuideToFunctional {
         }
     }
 
-    data class Aleixo(
+    data class Ident(
         val id: String
     )
 
-    data class AleixoPayload(
+    data class IdentPayload(
         val aleixoId: String
     )
 
 
-    fun Aleixo.toPayload() = AleixoPayload (
+    fun Ident.toPayload() = IdentPayload (
         aleixoId = id
     )
+
+    fun scopeFunctions() {
+
+        val wallet = Wallet("My wallet", 1)
+
+        wallet.let {
+            Wallet(it.name, 2)
+        }.also {
+            println(it.number)
+        }
+
+        val wallet2 = Wallet("My wallet2", 35)
+        val name = wallet2.apply {
+            name = "new name"
+            println(number)
+        }.name
+
+        println(name)
+    }
+
+    fun withContextObject() {
+        val wallet = Wallet("Ricas", 123)
+        with(wallet) {
+            println(name)
+            println(number)
+        }
+
+    }
+
+    fun repeatFunction() {
+
+        run {
+            repeat(12) {
+                println("imprimindo cada indice $it")
+            }
+        }
+    }
+
+    fun funTakeIfTakeUnless() {
+        var number = 3
+
+        val takeIf = number.takeIf {it % 2 == 0 } // retorna nulo se nao encontrar
+        val takeUnless = number.takeUnless { it % 2 == 0 } // retorna o valor
+
+        println(takeIf)
+        println(takeUnless)
+    }
+
+
+    data class Wallet(var name: String, val number: Int)
+
 }
